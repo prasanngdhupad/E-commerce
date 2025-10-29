@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { CiSearch } from "react-icons/ci";
 import { IoIosGitCompare } from "react-icons/io";
@@ -8,10 +8,18 @@ import { FaCartShopping } from "react-icons/fa6";
 import { RiMenu2Fill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import { GoRocket } from "react-icons/go";
+import CategoryPanel from "./CategoryPanel";
 
 function Header() {
+
+    const [isOpen,setIsopen]=useState(false)
+    const openCategoryPanel=()=>{
+        setIsopen(true);
+    }
+
   return (
     <header className="bg-white">
+    
       <div className="row1 pt-2 border border-t-0 border-r-0 border-l-0 border-b-gray-300 pb-2 text-gray-500">
         <div className="container flex justify-between items-center">
           <div>
@@ -101,7 +109,7 @@ function Header() {
       <nav>
         <div className="container py-3 flex items-center gap-7">
           <div className="col1 w-[20%]">
-            <Button className=" gap-2 text-black! w-full">
+            <Button className=" gap-2 text-black! w-full" onClick={openCategoryPanel}>
               <RiMenu2Fill className="text-[20px]" />
               <span>SHOP BY CATEGORIES</span>
               <IoIosArrowDown className="text-gray-500 ml-auto" />
@@ -163,6 +171,8 @@ function Header() {
           </div>
         </div>
       </nav>
+
+      <CategoryPanel setIsopens={setIsopen} isOpens={isOpen}/>
     </header>
   );
 }
