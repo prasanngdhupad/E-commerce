@@ -18,3 +18,7 @@ body {
   font-size: 20px;
 }
 
+
+.nav li .submenu{visibility: hidden;}
+.nav li:hover .submenu{opacity:1 !important;visibility: visible;}
+

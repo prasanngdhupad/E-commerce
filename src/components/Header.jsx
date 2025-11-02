@@ -11,15 +11,13 @@ import { GoRocket } from "react-icons/go";
 import CategoryPanel from "./CategoryPanel";
 
 function Header() {
-
-    const [isOpen,setIsopen]=useState(false)
-    const openCategoryPanel=()=>{
-        setIsopen(true);
-    }
+  const [isOpen, setIsopen] = useState(false);
+  const openCategoryPanel = () => {
+    setIsopen(true);
+  };
 
   return (
     <header className="bg-white">
-    
       <div className="row1 pt-2 border border-t-0 border-r-0 border-l-0 border-b-gray-300 pb-2 text-gray-500">
         <div className="container flex justify-between items-center">
           <div>
@@ -84,19 +82,19 @@ function Header() {
               <ul className="flex justify-between items-center">
                 <li className="relative cursor-pointer">
                   <IoIosGitCompare className="logo" />
-                  <button className="bg-red-500 rounded-[50%] w-5 h-5 text-[15px] text-white absolute -top-2 -right-3 flex items-center justify-center">
+                  <button className="bg-red-500 rounded-[50%] w-4 h-4 text-[15px] text-white absolute -top-2 -right-2 flex items-center justify-center">
                     2
                   </button>
                 </li>
                 <li className="relative cursor-pointer">
                   <FaRegHeart className="logo" />
-                  <button className="bg-red-500 rounded-[50%] w-5 h-5 text-[15px] text-white absolute -top-2 -right-3 flex items-center justify-center">
+                  <button className="bg-red-500 rounded-[50%] w-4 h-4 text-[15px] text-white absolute -top-2 -right-2 flex items-center justify-center">
                     2
                   </button>
                 </li>
                 <li className="relative cursor-pointer">
                   <FaCartShopping className="logo" />
-                  <button className="bg-red-500 rounded-[50%] w-5 h-5 text-[15px] text-white absolute -top-2 -right-3 flex items-center justify-center">
+                  <button className="bg-red-500 rounded-[50%] w-4 h-4 text-[15px] text-white absolute -top-2 -right-2 flex items-center justify-center">
                     2
                   </button>
                 </li>
@@ -109,7 +107,10 @@ function Header() {
       <nav>
         <div className="container py-3 flex items-center gap-7">
           <div className="col1 w-[20%]">
-            <Button className=" gap-2 text-black! w-full" onClick={openCategoryPanel}>
+            <Button
+              className=" gap-2 text-black! w-full"
+              onClick={openCategoryPanel}
+            >
               <RiMenu2Fill className="text-[20px]" />
               <span>SHOP BY CATEGORIES</span>
               <IoIosArrowDown className="text-gray-500 ml-auto" />
@@ -117,62 +118,99 @@ function Header() {
           </div>
 
           <div className="col2 w-[60%] ">
-            <ul className="flex items-center text-black font-medium  ">
-              <li>
-                <Link to={"/home"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Home</Button>
+            <ul className="flex items-center text-black font-medium nav">
+              <li className="relative ">
+                <Link to={"/home"} className="link ">
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]! ">
+                    Home
+                  </Button>
                 </Link>
+
+                <div className="absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[150px] opacity-0 submenu transition-all duration-200">
+                  <ul className="flex flex-col gap-1 ">
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
-                <Link to={"/Fashion"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Fashion</Button>
+                <Link to={"/Fashion"} className="link ">
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]! ">
+                    Fashion
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Electronic"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Electronic</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Electronic
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Bags"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Bags</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Bags
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Footwear"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Footwear</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Footwear
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Groceries"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Groceries</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Groceries
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Beauty"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Beauty</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Beauty
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Wellness"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Wellness</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Wellness
+                  </Button>
                 </Link>
               </li>
               <li>
                 <Link to={"/Jewellery"} className="link">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">Jewellery</Button>
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
+                    Jewellery
+                  </Button>
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="col3 w-[20%] flex items-center gap-0.5 link cursor-pointer">
-            <GoRocket className="text-[20px]"/>
+          <div className="col3 w-[20%] flex items-center gap-0.5 ">
+            <GoRocket className="text-[20px]" />
             Free International Delivery
           </div>
         </div>
       </nav>
 
-      <CategoryPanel setIsopens={setIsopen} isOpens={isOpen}/>
+      <CategoryPanel setIsopens={setIsopen} isOpens={isOpen} />
     </header>
   );
 }
