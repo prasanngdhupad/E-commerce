@@ -119,17 +119,23 @@ function Header() {
 
           <div className="col2 w-[60%] ">
             <ul className="flex items-center text-black font-medium nav">
-              <li className="relative ">
+              <li>
                 <Link to={"/home"} className="link ">
                   <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]! ">
                     Home
                   </Button>
                 </Link>
-
-                <div className="absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[150px] opacity-0 submenu transition-all duration-200">
+              </li>
+              <li className="relative ">
+                <Link to={"/Fashion"} className="link ">
+                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]! ">
+                    Fashion
+                  </Button>
+                </Link>
+                <div className=" absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[150px] submenu transition-all duration-200 z-50">
                   <ul className="flex flex-col gap-1 ">
                     <li className=" w-full ">
-                      <Link to={"/"}>
+                      <Link to={"/"} className="link">
                         <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
                           Men
                         </Button>
@@ -138,40 +144,104 @@ function Header() {
                     <li className=" w-full ">
                       <Link to={"/"}>
                         <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
-                          Men
+                          Women
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          girls
                         </Button>
                       </Link>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li>
-                <Link to={"/Fashion"} className="link ">
-                  <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]! ">
-                    Fashion
-                  </Button>
-                </Link>
-              </li>
-              <li>
+              <li className="relative">
                 <Link to={"/Electronic"} className="link">
                   <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
                     Electronic
                   </Button>
                 </Link>
+                <div className=" absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[150px] submenu transition-all duration-200 z-50">
+                  <ul className="flex flex-col gap-1 ">
+                    <li className=" w-full ">
+                      <Link to={"/"} className="link">
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          smart watch
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          laptops
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          mobiles
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
+
+              <li className="relative">
                 <Link to={"/Bags"} className="link">
                   <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
                     Bags
                   </Button>
                 </Link>
+
+                <div className=" absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[150px] submenu transition-all duration-200 z-50">
+                  <ul className="flex flex-col gap-1 ">
+                    <li className=" w-full ">
+                      <Link to={"/"} className="link">
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          women bags
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          men bags
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
+              <li className="relative">
                 <Link to={"/Footwear"} className="link">
                   <Button className="text-black! hover:text-[#ff5252]! transition text-[13px]!">
                     Footwear
                   </Button>
                 </Link>
+
+                <div className=" absolute bg-white top-[135%] border border-gray-200 left-2 shadow-md min-w-[180px] submenu transition-all duration-200 z-50">
+                  <ul className="flex flex-col gap-1 ">
+                    <li className=" w-full ">
+                      <Link to={"/"} className="link">
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          women footwears
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className=" w-full ">
+                      <Link to={"/"}>
+                        <Button className="text-gray-500! w-full justify-start! hover:text-[#ff5252]!">
+                          men footwears
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <Link to={"/Groceries"} className="link">
